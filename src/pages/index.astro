@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import HeroBanner from "../components/HeroBanner.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import DecorativeBox from "fulldev-ui/components/docs/DecorativeBox.astro";
 import Masonry from "fulldev-ui/components/Masonry.astro";
@@ -19,6 +20,7 @@ import Image from "fulldev-ui/components/Image.astro";
   </head>
   <body>
     <Header />
+    <HeroBanner />
     <main>
       <Section heading="Sobre nosotros" as="article">
         <Split>
@@ -44,9 +46,9 @@ import Image from "fulldev-ui/components/Image.astro";
         </Split>
       </Section>
 
-      <Section heading="Nuestros servicios">
+      <Section heading="Nuestros servicios" as="article">
         <Stack>
-          <article>
+          <section>
             <Heading level={3}>Hormigón Impreso</Heading>
             <Image
               src="/images/home/hormigon-impreso-sevilla.jpg"
@@ -61,7 +63,7 @@ import Image from "fulldev-ui/components/Image.astro";
               comunidad de vecinos. Con texturas variadas, el estampado es capaz
               de imitar a los adoquines, la piedra o la pizarra.
             </p>
-          </article>
+          </section>
           <article>
             <Heading level={3}>Hormigón Pulido</Heading>
             <Image
@@ -94,8 +96,8 @@ import Image from "fulldev-ui/components/Image.astro";
           </article>
         </Stack>
       </Section>
-      <Section>
-        <Heading level={2}>Galería de fotos</Heading>
+      <Section heading="Galería de fotos" as="article">
+        <!-- <Gallery /> -->
         <Masonry>
           <DecorativeBox style={{ height: "150px" }} />
           <DecorativeBox style={{ height: "150px" }} />

@@ -17,6 +17,8 @@
     "@deno/astro-adapter": "^0.1.5",
     "astro": "^4.16.13",
     "fulldev-ui": "^0.4.33",
+    "photoswipe": "^5.4.4",
+    "swiper": "^11.1.15",
     "typescript": "^5.6.3"
   }
 }
