@@ -1,0 +1,45 @@
+---
+import Grid from "fulldev-ui/components/Grid.astro";
+import Image from "fulldev-ui/components/Image.astro";
+import "photoswipe/style.css";
+
+const imageFiles = await Astro.glob("/src/images/home/gallery/*");
+---
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#gallery",
+    children: "a",
+    pswpModule: () => import("photoswipe"),
+  });
+  lightbox.init();
+</script>
+
+<Grid size="sm" id="gallery">
+  {
+    imageFiles.map((img) => (
+      <a
+        class="gallery-image"
+        href={img.default.src}
+        data-pswp-width={img.default.width}
+        data-pswp-height={img.default.height}
+        target="_blank"
+      >
+        <Image src={img.default.src} alt="" />
+      </a>
+    ))
+  }
+</Grid>
+
+<style>
+  .gallery-image {
+    height: 20rem;
+  }
+
+  .gallery-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+</style>

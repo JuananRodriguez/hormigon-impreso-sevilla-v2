@@ -4,13 +4,12 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeroBanner from "../components/HeroBanner.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import DecorativeBox from "fulldev-ui/components/docs/DecorativeBox.astro";
-import Masonry from "fulldev-ui/components/Masonry.astro";
 import Section from "fulldev-ui/components/Section.astro";
 import Heading from "fulldev-ui/components/Heading.astro";
 import Stack from "fulldev-ui/components/Stack.astro";
 import Split from "fulldev-ui/components/Split.astro";
 import Image from "fulldev-ui/components/Image.astro";
+import Gallery from "../components/Gallery.astro";
 ---
 
 <!doctype html>
@@ -97,25 +96,9 @@ import Image from "fulldev-ui/components/Image.astro";
         </Stack>
       </Section>
       <Section heading="Galería de fotos" as="article">
-        <!-- <Gallery /> -->
-        <Masonry>
-          <DecorativeBox style={{ height: "150px" }} />
-          <DecorativeBox style={{ height: "150px" }} />
-          <DecorativeBox />
-          <DecorativeBox style={{ height: "150px" }} />
-          <DecorativeBox />
-          <DecorativeBox style={{ height: "150px" }} />
-          <DecorativeBox style={{ height: "150px" }} />
-          <DecorativeBox />
-          <DecorativeBox />
-          <DecorativeBox style={{ height: "150px" }} />
-          <DecorativeBox />
-          <DecorativeBox style={{ height: "150px" }} />
-          <DecorativeBox />
-        </Masonry>
+        <Gallery />
       </Section>
     </main>
-
     <Footer />
   </body>
 </html>
