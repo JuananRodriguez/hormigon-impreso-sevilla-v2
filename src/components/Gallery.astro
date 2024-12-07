@@ -1,4 +1,5 @@
 ---
+import Button from "fulldev-ui/components/Button.astro";
 import Grid from "fulldev-ui/components/Grid.astro";
 import Image from "fulldev-ui/components/Image.astro";
 import "photoswipe/style.css";
@@ -8,19 +9,43 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
 
 <script>
   import PhotoSwipeLightbox from "photoswipe/lightbox";
+
   const lightbox = new PhotoSwipeLightbox({
     gallery: "#gallery",
     children: "a",
     pswpModule: () => import("photoswipe"),
   });
+
   lightbox.init();
+</script>
+
+<script>
+  const RANGE = 6;
+
+  function handleLoadMore() {
+    const hiddenImages = document.querySelectorAll(".gallery-image-hidden");
+    const isLast = hiddenImages.length <= RANGE;
+    const selection = [...hiddenImages].splice(0, RANGE);
+    selection.forEach((element) => {
+      element.classList.remove("gallery-image-hidden");
+    });
+
+    if (isLast) {
+      document.getElementById("load-more")?.remove();
+    }
+  }
+
+  handleLoadMore();
+  document
+    .getElementById("load-more")
+    ?.addEventListener("click", handleLoadMore);
 </script>
 
 <Grid size="sm" id="gallery">
   {
     imageFiles.map((img) => (
       <a
-        class="gallery-image"
+        class="gallery-image gallery-image-hidden"
         href={img.default.src}
         data-pswp-width={img.default.width}
         data-pswp-height={img.default.height}
@@ -32,6 +57,10 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
   }
 </Grid>
 
+<div class="gallery-footer">
+  <Button as="button" color="brand" id="load-more">Cargar más imágenes</Button>
+</div>
+
 <style>
   .gallery-image {
     height: 20rem;
@@ -41,5 +70,21 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
     object-fit: cover;
     height: 100%;
     width: 100%;
+  }
+
+  .gallery-footer {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-footer button {
+    font-size: 1.25rem;
+  }
+
+  .gallery-image-hidden {
+    display: none;
   }
 </style>
