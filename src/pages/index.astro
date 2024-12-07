@@ -10,6 +10,7 @@ import Stack from "fulldev-ui/components/Stack.astro";
 import Split from "fulldev-ui/components/Split.astro";
 import Image from "fulldev-ui/components/Image.astro";
 import Gallery from "../components/Gallery.astro";
+import StickyBanner from "../components/StickyBanner.astro";
 ---
 
 <!doctype html>
@@ -20,85 +21,88 @@ import Gallery from "../components/Gallery.astro";
   <body>
     <Header />
     <HeroBanner />
-    <main>
-      <Section heading="Sobre nosotros" as="article">
-        <Split>
-          <section>
-            <Heading level={4} as="h3">
-              Realizamos trabajos de hormigón impreso en Sevilla, trabajos de
-              hormigón impreso en Huelva y trabajos de hormigón impreso en
-              Cádiz.
-            </Heading>
-            <p>
-              Como su nombre indica, es un hormigón destinado a embellecer los
-              espacios en los que se utiliza. Además, también aparecerá una
-              variada gama de hormigones estampados con distintos nombres en
-              función de su técnica de diseño. Así, al aportar un toque original
-              y único a su hogar, el hormigón estampado es hoy uno de los
-              revestimientos más populares del mundo.
-            </p>
-          </section>
-          <Image
-            src="/images/home/trabajos-de-hormigon-en-sevilla.jpg"
-            alt="trabajos-de-hormigon-en-sevilla"
-          />
-        </Split>
-      </Section>
-
-      <Section heading="Nuestros servicios" as="article">
-        <Stack>
-          <section>
-            <Heading level={3}>Hormigón Impreso</Heading>
+    <div>
+      <main>
+        <Section heading="Sobre nosotros" as="article">
+          <Split>
+            <section>
+              <Heading level={4} as="h3">
+                Realizamos trabajos de hormigón impreso en Sevilla, trabajos de
+                hormigón impreso en Huelva y trabajos de hormigón impreso en
+                Cádiz.
+              </Heading>
+              <p>
+                Como su nombre indica, es un hormigón destinado a embellecer los
+                espacios en los que se utiliza. Además, también aparecerá una
+                variada gama de hormigones estampados con distintos nombres en
+                función de su técnica de diseño. Así, al aportar un toque
+                original y único a su hogar, el hormigón estampado es hoy uno de
+                los revestimientos más populares del mundo.
+              </p>
+            </section>
             <Image
-              src="/images/home/hormigon-impreso-sevilla.jpg"
-              alt="hormigon-impreso-en-sevilla"
+              src="/images/home/trabajos-de-hormigon-en-sevilla.jpg"
+              alt="trabajos-de-hormigon-en-sevilla"
             />
-            <p>
-              Se trata de una solución muy demandada que consiste en la
-              aplicación de un tratamiento sobre una superficie con un sistema
-              de estampado, texturizado y coloreado del hormigón fresco en el
-              momento. Son unas soluciones que se aplican sobre todo en espacios
-              exteriores como la entrada al garaje o en las zonas comunes de una
-              comunidad de vecinos. Con texturas variadas, el estampado es capaz
-              de imitar a los adoquines, la piedra o la pizarra.
-            </p>
-          </section>
-          <article>
-            <Heading level={3}>Hormigón Pulido</Heading>
-            <Image
-              src="/images/home/hormigon-pulido-sevilla.jpg"
-              alt="hormigon-pulido-en-sevilla"
-            />
-            <p>
-              Hablamos de un material que sale del allanado y el fratasado de un
-              tipo de hormigón semipulido, al que se le suman compuestos
-              químicos que le aportan una mayor firmeza. Tras pulirlo, se
-              consigue una pieza elegante y duradera que, además, destaca por
-              tener un mantenimiento sencillo. Todas estas características han
-              llevado a que sea muy demandado para colocarlo en parques,
-              viviendas o piscinas.
-            </p>
-          </article>
-          <article>
-            <Heading level={3}>Hormigón Vertical</Heading>
-            <Image
-              src="/images/home/hormigon-vertical-sevilla.jpg"
-              alt="hormigon-vertical-en-sevilla"
-            />
-            <p>
-              Se trata de una solución bastante sencilla y práctica con la que
-              podemos decorar superficies verticales tanto en espacios
-              interiores como en exteriores. Podemos usar dicha técnica para
-              reacondicionar cualquier superficie en poco tiempo y así conseguir
-              que los espacios luzcan más elegantes y diferentes.
-            </p>
-          </article>
-        </Stack>
-      </Section>
-      <Section heading="Galería de fotos" as="article">
-        <Gallery />
-      </Section>
-    </main>
+          </Split>
+        </Section>
+        <Section heading="Nuestros servicios" as="article">
+          <Stack>
+            <section>
+              <Heading level={3}>Hormigón Impreso</Heading>
+              <Image
+                src="/images/home/hormigon-impreso-sevilla.jpg"
+                alt="hormigon-impreso-en-sevilla"
+              />
+              <p>
+                Se trata de una solución muy demandada que consiste en la
+                aplicación de un tratamiento sobre una superficie con un sistema
+                de estampado, texturizado y coloreado del hormigón fresco en el
+                momento. Son unas soluciones que se aplican sobre todo en
+                espacios exteriores como la entrada al garaje o en las zonas
+                comunes de una comunidad de vecinos. Con texturas variadas, el
+                estampado es capaz de imitar a los adoquines, la piedra o la
+                pizarra.
+              </p>
+            </section>
+            <article>
+              <Heading level={3}>Hormigón Pulido</Heading>
+              <Image
+                src="/images/home/hormigon-pulido-sevilla.jpg"
+                alt="hormigon-pulido-en-sevilla"
+              />
+              <p>
+                Hablamos de un material que sale del allanado y el fratasado de
+                un tipo de hormigón semipulido, al que se le suman compuestos
+                químicos que le aportan una mayor firmeza. Tras pulirlo, se
+                consigue una pieza elegante y duradera que, además, destaca por
+                tener un mantenimiento sencillo. Todas estas características han
+                llevado a que sea muy demandado para colocarlo en parques,
+                viviendas o piscinas.
+              </p>
+            </article>
+            <article>
+              <Heading level={3}>Hormigón Vertical</Heading>
+              <Image
+                src="/images/home/hormigon-vertical-sevilla.jpg"
+                alt="hormigon-vertical-en-sevilla"
+              />
+              <p>
+                Se trata de una solución bastante sencilla y práctica con la que
+                podemos decorar superficies verticales tanto en espacios
+                interiores como en exteriores. Podemos usar dicha técnica para
+                reacondicionar cualquier superficie en poco tiempo y así
+                conseguir que los espacios luzcan más elegantes y diferentes.
+              </p>
+            </article>
+          </Stack>
+        </Section>
+        <Section heading="Galería de fotos" as="article">
+          <Gallery />
+        </Section>
+      </main>
+      <StickyBanner />
+    </div>
     <Footer />
   </body>
 </html>
