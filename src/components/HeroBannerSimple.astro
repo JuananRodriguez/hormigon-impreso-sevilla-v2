@@ -1,0 +1,61 @@
+---
+import Heading from "fulldev-ui/components/Heading.astro";
+import "swiper/css";
+import "swiper/css/navigation";
+---
+
+<div class="swiper">
+  <div class="swiper-wrapper" id="my-slider">
+    <section class="swiper-slide">
+      <section class="hero-content">
+        <Heading level={1}>Hormigón impreso y pulido</Heading>
+        <Heading level={2}>Durabilidad y estilo para tus espacios</Heading>
+        <p>
+          Especialistas en hormigón impreso y pulido, transformamos tus
+          superficies en obras únicas, resistentes y elegantes. Soluciones
+          personalizadas para exteriores e interiores con acabados de alta
+          calidad.
+        </p>
+      </section>
+    </section>
+  </div>
+</div>
+
+<style>
+  .swiper {
+    width: 100%;
+  }
+  .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+  }
+  .swiper-slide img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .swiper .hero-content {
+    height: 100%;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+  }
+
+  .swiper .hero-content p,
+  .swiper .hero-content h1,
+  .swiper .hero-content h2 {
+    color: #eeeeee;
+  }
+</style>
