@@ -43,7 +43,7 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
 
 <Grid size="sm" id="gallery">
   {
-    imageFiles.map((img) => (
+    imageFiles.map((img, index) => (
       <a
         class="gallery-image gallery-image-hidden"
         href={img.default.src}
@@ -51,7 +51,10 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
         data-pswp-height={img.default.height}
         target="_blank"
       >
-        <Image src={img.default.src} alt="" />
+        <Image
+          src={img.default.src}
+          alt={`ejemplo de hormigon impreso ${index}`}
+        />
       </a>
     ))
   }
