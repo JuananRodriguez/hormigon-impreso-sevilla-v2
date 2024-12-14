@@ -35,7 +35,6 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
       const innerImgElement = element.querySelector(".gallery-image-img");
       element.setAttribute("href", newSrc ?? "");
       innerImgElement?.setAttribute("src", newSrc ?? "");
-      console.log(newSrc);
     });
 
     if (isLast) {
