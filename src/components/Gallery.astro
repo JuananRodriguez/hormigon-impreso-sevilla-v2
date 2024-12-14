@@ -2,6 +2,7 @@
 import Button from "fulldev-ui/components/Button.astro";
 import Grid from "fulldev-ui/components/Grid.astro";
 import Image from "fulldev-ui/components/Image.astro";
+import Placeholder_img from "../images/placeholder_img.jpg";
 import "photoswipe/style.css";
 
 const imageFiles = await Astro.glob("/src/images/home/gallery/*");
@@ -23,11 +24,18 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
   const RANGE = 6;
 
   function handleLoadMore() {
-    const hiddenImages = document.querySelectorAll(".gallery-image-hidden");
+    const hiddenImages = document.querySelectorAll(
+      ".gallery-image-anchor-hidden"
+    );
     const isLast = hiddenImages.length <= RANGE;
     const selection = [...hiddenImages].splice(0, RANGE);
     selection.forEach((element) => {
-      element.classList.remove("gallery-image-hidden");
+      element.classList.remove("gallery-image-anchor-hidden");
+      const newSrc = element.getAttribute("data-pswp-src");
+      const innerImgElement = element.querySelector(".gallery-image-img");
+      element.setAttribute("href", newSrc ?? "");
+      innerImgElement?.setAttribute("src", newSrc ?? "");
+      console.log(newSrc);
     });
 
     if (isLast) {
@@ -45,14 +53,16 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
   {
     imageFiles.map((img, index) => (
       <a
-        class="gallery-image gallery-image-hidden"
+        class="gallery-image-anchor gallery-image-anchor-hidden"
         href={img.default.src}
         data-pswp-width={img.default.width}
         data-pswp-height={img.default.height}
+        data-pswp-src={img.default.src}
         target="_blank"
       >
         <Image
-          src={img.default.src}
+          class="gallery-image-img"
+          src={Placeholder_img.src}
           alt={`ejemplo de hormigon impreso ${index}`}
         />
       </a>
@@ -65,11 +75,11 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
 </div>
 
 <style>
-  .gallery-image {
+  .gallery-image-anchor {
     height: 20rem;
   }
 
-  .gallery-image img {
+  .gallery-image-anchor img {
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -87,7 +97,7 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
     font-size: 1.25rem;
   }
 
-  .gallery-image-hidden {
+  .gallery-image-anchor-hidden {
     display: none;
   }
 </style>
