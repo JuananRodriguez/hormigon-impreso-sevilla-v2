@@ -9,7 +9,10 @@ import HeaderLink from "./HeaderLink.astro";
     <span class="open" title="Abrir">Abrir</span>
   </label>
   <div class="content">
-    <HeaderLink href="/about">Sobre nosotros</HeaderLink>
+    <HeaderLink href="/services">¿Qué hacemos?</HeaderLink>
+    <HeaderLink href="/frequently-asked-questions"
+      >Preguntas Frecuentes</HeaderLink
+    >
   </div>
 </div>
 
@@ -96,8 +99,9 @@ import HeaderLink from "./HeaderLink.astro";
   }
 
   .content {
+    max-width: 400px;
     position: absolute;
-    left: 0px;
+    right: 0px;
     top: 66px;
     width: calc(100% - 2rem);
     height: calc(100vh - 98px);
