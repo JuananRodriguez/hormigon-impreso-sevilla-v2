@@ -5,24 +5,24 @@ import "swiper/css/navigation";
 ---
 
 <div class="swiper">
-  <div class="swiper-wrapper" id="my-slider">
-    <section class="swiper-slide">
-      <section class="hero-content">
-        <Heading level={1}>Hormigón impreso y pulido</Heading>
-        <Heading level={2}>Durabilidad y estilo para tus espacios</Heading>
-        <p>
-          Especialistas en hormigón impreso y pulido, transformamos tus
-          superficies en obras únicas, resistentes y elegantes. Soluciones
-          personalizadas para exteriores e interiores con acabados de alta
-          calidad.
-        </p>
-      </section>
-    </section>
-  </div>
+  <section class="swiper-slide"></section>
+  <section class="hero-content">
+    <div class="hero-content-content">
+      <Heading level={1}>Hormigón impreso y pulido en Sevilla</Heading>
+      <Heading level={2}>Durabilidad y estilo para tus espacios</Heading>
+      <p>
+        Especialistas en hormigón impreso y pulido, transformamos tus
+        superficies en obras únicas, resistentes y elegantes. Soluciones
+        personalizadas para exteriores e interiores con acabados de alta
+        calidad.
+      </p>
+    </div>
+  </section>
 </div>
 
 <style>
   .swiper {
+    position: relative;
     width: 100%;
   }
   .swiper-slide {
@@ -31,20 +31,21 @@ import "swiper/css/navigation";
     height: 100vh;
     overflow: hidden;
     background-color: black;
+    background: url("/images/home/hero/hormigon-impreso-en-sevilla.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: exclusion;
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+    opacity: 0.5;
   }
-  .swiper-slide img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
+
   .swiper .hero-content {
+    position: absolute;
+    top: 0;
+    left: auto;
     height: 100%;
     width: 100%;
-    max-width: 650px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -53,9 +54,13 @@ import "swiper/css/navigation";
     flex-direction: column;
   }
 
+  .swiper .hero-content-content {
+    max-width: 650px;
+  }
+
   .swiper .hero-content p,
   .swiper .hero-content h1,
   .swiper .hero-content h2 {
-    color: #eeeeee;
+    color: #040404;
   }
 </style>
