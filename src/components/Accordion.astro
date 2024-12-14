@@ -11,7 +11,7 @@ const { name, title } = Astro.props;
 ---
 
 <div class="accordion">
-  <input name={name} type="checkbox" class="accordion-toggle" />
+  <input id={name} name={name} type="checkbox" class="accordion-toggle" />
   <label for={name} class="accordion-header">
     <Heading class="accordion-header-list" level={3}>{title}</Heading>
   </label>
@@ -25,7 +25,7 @@ const { name, title } = Astro.props;
     flex-direction: column;
     width: 100%;
     height: auto;
-    margin: 1rem auto;
+    margin: 0 auto;
   }
   .accordion-toggle,
   .accordion-header {
@@ -40,8 +40,10 @@ const { name, title } = Astro.props;
   .accordion-toggle {
     opacity: 0;
     background-color: transparent;
-    z-index: 1;
-    margin-bottom: 2px;
+    z-index: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
   }
   .accordion-header:focus: {
     border: 1px solid blue;
@@ -49,7 +51,7 @@ const { name, title } = Astro.props;
   .accordion-header {
     color: #7f8787;
     position: relative;
-    margin-top: -3em;
+    /* margin-top: -3em; */
     padding-left: 10px;
   }
   .accordion-content {
