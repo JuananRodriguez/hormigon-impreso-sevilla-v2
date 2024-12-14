@@ -1,0 +1,86 @@
+---
+import Heading from "fulldev-ui/components/Heading.astro";
+interface Props {
+  /** name is used to relate label and input. Should be unique in the document*/
+  name: string;
+  /** label us used as label of input */
+  title: string;
+}
+
+const { name, title } = Astro.props;
+---
+
+<div class="accordion">
+  <input name={name} type="checkbox" class="accordion-toggle" />
+  <label for={name} class="accordion-header">
+    <Heading class="accordion-header-list" level={3}>{title}</Heading>
+  </label>
+  <div class="accordion-content">{(<slot />)}</div>
+</div>
+
+<style>
+  .accordion {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+  }
+  .accordion-toggle,
+  .accordion-header {
+    width: 100%;
+    min-height: 3em;
+    margin: 0;
+    cursor: pointer;
+  }
+  .accordion-header .accordion-header-list {
+    display: inline;
+  }
+  .accordion-toggle {
+    opacity: 0;
+    background-color: transparent;
+    z-index: 1;
+    margin-bottom: 2px;
+  }
+  .accordion-header:focus: {
+    border: 1px solid blue;
+  }
+  .accordion-header {
+    color: #7f8787;
+    position: relative;
+    margin-top: -3em;
+    padding-left: 10px;
+  }
+  .accordion-content {
+    box-sizing: border-box;
+    color: #7f8787;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    max-height: 0; /* Cambiado ahora se actúa directamente sobre la altura*/
+    padding: 0 20px;
+    transition: max-height 0.3s ease 0.1s;
+  }
+  .accordion-toggle:checked + .accordion-header + .accordion-content {
+    max-height: 100vh;
+    margin-right: 0;
+  }
+  .accordion-header::before,
+  .accordion-toggle:checked + .accordion-header::before {
+    content: "+";
+    display: inline-block;
+    text-align: center;
+    width: 1em;
+    font-size: 1em;
+  }
+  .accordion-toggle:checked + .accordion-header::before {
+    content: "-";
+  }
+  .accordion-toggle:hover + .accordion-header {
+    background-color: #f7f1f1;
+  }
+  .accordion-toggle:checked + .accordion-header {
+    background-color: #fff;
+  }
+</style>
