@@ -1,0 +1,223 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeroBanner from "../components/HeroBannerSimple.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Section from "fulldev-ui/components/Section.astro";
+import StickyBanner from "../components/StickyBanner.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <div>
+    <Header />
+    <HeroBanner
+      title="Hormigón impreso vertical"
+      subtitle="Trabajamos para Sevilla, Huelva, Cádiz y alrededores"
+    />
+    <div>
+      <main>
+        <Section title="¿Qué es la Tematización con Hormigón?" level={3}>
+          <p>
+            La <strong>tematización con hormigón</strong> es una técnica decorativa
+            que permite transformar cualquier espacio mediante el uso de moldes y
+            técnicas de acabado sobre superficies de hormigón. Esta técnica busca
+            recrear estilos, texturas y patrones que simulan materiales naturales
+            como piedra, ladrillo, madera o incluso acabados más contemporáneos.
+            La tematización con hormigón se aplica tanto en exteriores como en interiores,
+            permitiendo crear ambientes personalizados y únicos en proyectos residenciales,
+            comerciales o urbanos.
+          </p>
+        </Section>
+
+        <Section title="Ventajas de la Tematización con Hormigón" level={3}>
+          <ul>
+            <li>
+              <strong>Transformación creativa de espacios</strong>: Permite
+              adaptar cualquier superficie a un tema específico, creando una
+              atmósfera única según las necesidades del proyecto.
+            </li>
+            <li>
+              <strong>Durabilidad y resistencia</strong>: El hormigón es un
+              material altamente resistente, ideal para resistir el paso del
+              tiempo y las inclemencias del clima, lo que lo hace perfecto para
+              espacios exteriores.
+            </li>
+            <li>
+              <strong>Bajo mantenimiento</strong>: Al igual que el hormigón
+              impreso y otros acabados, la tematización con hormigón requiere
+              poco mantenimiento, ya que es fácil de limpiar y mantener en buen
+              estado con un mínimo esfuerzo.
+            </li>
+            <li>
+              <strong>Versatilidad en diseños</strong>: Se pueden crear
+              patrones, texturas y colores totalmente personalizados para
+              adaptarse al estilo o temática deseada, desde ambientes rústicos
+              hasta modernos.
+            </li>
+            <li>
+              <strong>Respetuoso con el medio ambiente</strong>: Al optar por
+              hormigón reciclado o técnicas de bajo impacto, la tematización
+              puede ser una opción ecológica, ya que se utilizan materiales
+              duraderos y sostenibles.
+            </li>
+          </ul>
+        </Section>
+
+        <Section title="Usos Comunes de la Tematización con Hormigón" level={3}>
+          <ul>
+            <li>
+              <strong>Fachadas y exteriores</strong>: Las fachadas de edificios
+              pueden ser tematizadas para simular materiales naturales o para
+              dar un toque único, por ejemplo, con acabados que imitan la piedra
+              o la madera, dando una apariencia rústica o moderna.
+            </li>
+            <li>
+              <strong>Jardines y paisajismo</strong>: Es común usar la
+              tematización con hormigón en el diseño de jardines y paisajes para
+              crear caminos, muros, fuentes o elementos decorativos, todos con
+              acabados personalizados que se adaptan a la estética del espacio.
+            </li>
+            <li>
+              <strong>Interiores temáticos</strong>: En el diseño interior, la
+              tematización con hormigón puede ser utilizada para crear paredes
+              de acento, suelos decorativos, y otros elementos arquitectónicos,
+              como columnas o chimeneas, con acabados que imitan materiales
+              nobles.
+            </li>
+            <li>
+              <strong>Centros comerciales y tiendas</strong>: La tematización
+              con hormigón se utiliza en comercios para crear una atmósfera
+              específica, como en la creación de paredes decorativas que imitan
+              materiales industriales o vintage, ayudando a reforzar el concepto
+              de la tienda o el producto.
+            </li>
+            <li>
+              <strong>Entornos urbanos y públicos</strong>: En plazas, parques,
+              muros de contención o espacios públicos, la tematización con
+              hormigón puede servir para embellecer y dar carácter a un entorno
+              urbano, integrando elementos de la naturaleza o patrones
+              decorativos innovadores.
+            </li>
+          </ul>
+        </Section>
+
+        <Section title="Proceso de Tematización con Hormigón" level={3}>
+          <ol>
+            <li>
+              <strong>Diseño personalizado</strong>: El primer paso en la
+              tematización es definir el estilo y diseño que se desea lograr.
+              Esto incluye la selección de moldes, texturas, patrones y colores
+              para las superficies.
+            </li>
+            <li>
+              <strong>Preparación de la superficie</strong>: La superficie sobre
+              la que se aplicará el hormigón se prepara adecuadamente,
+              asegurándose de que esté limpia, nivelada y libre de impurezas que
+              puedan interferir con el proceso.
+            </li>
+            <li>
+              <strong>Aplicación del hormigón</strong>: Se vierte una capa base
+              de hormigón sobre la superficie y, dependiendo del diseño, se
+              utilizan pigmentos y aditivos para personalizar el color y la
+              textura.
+            </li>
+            <li>
+              <strong>Moldeo e impresión</strong>: Se aplican los moldes sobre
+              la superficie de hormigón aún fresca, dando forma al diseño
+              deseado. Los moldes pueden imitar una amplia variedad de
+              materiales como piedra, ladrillo, madera o texturas abstractas.
+            </li>
+            <li>
+              <strong>Sellado y protección</strong>: Una vez que el diseño se ha
+              curado, se aplica un sellador para proteger el acabado de la
+              superficie, asegurando su durabilidad, resistencia al agua y
+              manchas, y preservando su aspecto original por más tiempo.
+            </li>
+          </ol>
+        </Section>
+
+        <Section
+          title="Mantenimiento de la Tematización con Hormigón"
+          level={3}
+        >
+          <p>
+            El mantenimiento de la tematización con hormigón es bastante
+            sencillo, gracias a la durabilidad del material. Aquí te dejamos
+            algunos consejos:
+          </p>
+          <ul>
+            <li>
+              <strong>Limpieza periódica</strong>: Se recomienda barrer o lavar
+              las superficies periódicamente para eliminar suciedad y polvo. En
+              exteriores, el lavado con agua y jabón suave es suficiente para
+              mantener la apariencia.
+            </li>
+            <li>
+              <strong>Reaplicación de sellador</strong>: Aunque el sellador
+              aplicado en la fase final protege la superficie, con el tiempo es
+              posible que necesite reaplicarse, especialmente en exteriores o en
+              áreas con mucho tránsito.
+            </li>
+            <li>
+              <strong>Evitar el uso de productos abrasivos</strong>: No se deben
+              utilizar productos de limpieza abrasivos o ácidos que puedan dañar
+              el acabado del hormigón o afectar la apariencia del diseño.
+            </li>
+            <li>
+              <strong>Inspección de grietas</strong>: Como cualquier material,
+              el hormigón puede presentar grietas debido al movimiento o al
+              desgaste. Es importante inspeccionar regularmente la superficie y
+              realizar reparaciones de ser necesario.
+            </li>
+          </ul>
+        </Section>
+
+        <Section
+          title="Aplicaciones Creativas de la Tematización con Hormigón"
+          level={3}
+        >
+          <p>
+            Además de las aplicaciones tradicionales, la tematización con
+            hormigón ofrece muchas posibilidades creativas que pueden
+            transformar radicalmente un espacio. Algunas de las aplicaciones más
+            innovadoras incluyen:
+          </p>
+          <ul>
+            <li>
+              <strong>Diseños geométricos y modernos</strong>: Con la
+              tematización de hormigón, es posible crear patrones geométricos o
+              de diseño contemporáneo que aportan un toque moderno a las
+              superficies, ideales para locales comerciales o viviendas de
+              estilo industrial.
+            </li>
+            <li>
+              <strong>Fachadas temáticas</strong>: Se puede utilizar en
+              proyectos arquitectónicos para crear fachadas temáticas, como en
+              construcciones de estilo medieval, rústico o futurista, imitando
+              materiales de otros períodos o culturas.
+            </li>
+            <li>
+              <strong>Elementos de paisajismo</strong>: En jardines, terrazas o
+              patios, la tematización con hormigón se puede usar para crear
+              elementos decorativos como estatuas, fuentes o muros que combinan
+              estética y funcionalidad.
+            </li>
+            <li>
+              <strong>Creación de esculturas y murales</strong>: Los artistas
+              del hormigón pueden utilizar esta técnica para realizar esculturas
+              o murales de gran formato, dando un toque artístico a parques
+              públicos, plazas o proyectos artísticos en espacios urbanos.
+            </li>
+          </ul>
+        </Section>
+      </main>
+      <StickyBanner />
+    </div>
+    <Footer />
+  </div>
+</html>

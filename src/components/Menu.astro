@@ -9,10 +9,23 @@ import HeaderLink from "./HeaderLink.astro";
     <span class="open" title="Abrir">Abrir</span>
   </label>
   <div class="content">
-    <HeaderLink href="/services">¿Qué hacemos?</HeaderLink>
-    <HeaderLink href="/frequently-asked-questions"
+    <HeaderLink class="menu-item" href="/sobre-nosotros"
+      >Sobre Nosotros</HeaderLink
+    >
+    <!-- <HeaderLink class="menu-item" href="/services">Servicios</HeaderLink> -->
+    <HeaderLink class="menu-item" href="/hormigon-impreso"
+      >Hormigon Impreso</HeaderLink
+    >
+    <HeaderLink class="menu-item" href="/hormigon-pulido"
+      >Hormigon Pulido</HeaderLink
+    >
+    <HeaderLink class="menu-item" href="/hormigon-impreso-vertical-tematizado"
+      >Hormigon Vertical Tematizado</HeaderLink
+    >
+    <HeaderLink class="menu-item" href="/frequently-asked-questions"
       >Preguntas Frecuentes</HeaderLink
     >
+    <!-- <HeaderLink class="menu-item" href="/services">Contacto</HeaderLink> -->
   </div>
 </div>
 
@@ -99,6 +112,7 @@ import HeaderLink from "./HeaderLink.astro";
   }
 
   .content {
+    flex-direction: column;
     max-width: 400px;
     position: absolute;
     right: 0px;
@@ -111,6 +125,10 @@ import HeaderLink from "./HeaderLink.astro";
   }
 
   input#open-close:checked + label + .content {
-    display: block;
+    display: flex;
+  }
+
+  .content .menu-item {
+    font-size: 1.8rem;
   }
 </style>

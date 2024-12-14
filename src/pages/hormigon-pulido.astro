@@ -1,0 +1,218 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeroBanner from "../components/HeroBannerSimple.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Section from "fulldev-ui/components/Section.astro";
+import StickyBanner from "../components/StickyBanner.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <div>
+    <Header />
+    <HeroBanner
+      title="Hormigón pulido"
+      subtitle="Trabajamos para Sevilla, Huelva, Cádiz y alrededores"
+    />
+    <div>
+      <main>
+        <Section title="¿Qué es el Hormigón Pulido?" level={3}>
+          <p>
+            El <strong>hormigón pulido</strong> es un tipo de pavimento de hormigón
+            que se caracteriza por su acabado suave y brillante, logrado mediante
+            un proceso de pulido que elimina las irregularidades de la superficie
+            del hormigón. Este proceso no solo mejora la estética, sino que también
+            aumenta la durabilidad y resistencia de la superficie. El hormigón pulido
+            es ampliamente utilizado en interiores y exteriores debido a sus características
+            de bajo mantenimiento y alto rendimiento.
+          </p>
+        </Section>
+
+        <Section title="Características del Hormigón Pulido" level={3}>
+          <ul>
+            <li>
+              <strong>Acabado suave y brillante</strong>: Gracias al proceso de
+              pulido, el hormigón adquiere una superficie lisa y brillante que
+              mejora la apariencia estética de cualquier espacio.
+            </li>
+            <li>
+              <strong>Durabilidad y resistencia</strong>: El hormigón pulido es
+              altamente resistente al desgaste, los impactos y las manchas, lo
+              que lo convierte en una opción ideal para zonas de alto tráfico.
+            </li>
+            <li>
+              <strong>Bajo mantenimiento</strong>: Requiere poco mantenimiento,
+              solo un barrido regular y ocasionalmente una limpieza profunda
+              para mantener su brillo y aspecto.
+            </li>
+            <li>
+              <strong>Resistente a manchas y suciedad</strong>: Su superficie
+              densa hace que sea menos susceptible a la absorción de líquidos y
+              manchas, lo que facilita la limpieza.
+            </li>
+            <li>
+              <strong>Variedad de acabados</strong>: El hormigón pulido ofrece
+              una gran variedad de acabados y colores, adaptándose a diferentes
+              estilos y necesidades.
+            </li>
+          </ul>
+        </Section>
+
+        <Section title="Ventajas del Hormigón Pulido" level={3}>
+          <ul>
+            <li>
+              <strong>Estética moderna</strong>: El acabado pulido ofrece un
+              aspecto moderno y elegante, ideal para proyectos comerciales y
+              residenciales que buscan un estilo minimalista o contemporáneo.
+            </li>
+            <li>
+              <strong>Versatilidad de uso</strong>: Se puede aplicar tanto en
+              espacios interiores como exteriores, incluyendo garajes,
+              almacenes, oficinas, salas de exposiciones, tiendas y viviendas.
+            </li>
+            <li>
+              <strong>Mejora la luminosidad</strong>: Debido a su acabado
+              brillante, el hormigón pulido refleja la luz, lo que ayuda a
+              iluminar los espacios de manera natural y a reducir la necesidad
+              de iluminación artificial.
+            </li>
+            <li>
+              <strong>Reducido costo de mantenimiento</strong>: El hormigón
+              pulido es fácil de mantener, ya que no requiere selladores ni
+              tratamientos complicados, solo un mantenimiento básico para
+              preservar su brillo.
+            </li>
+            <li>
+              <strong>Durabilidad a largo plazo</strong>: Su alta resistencia lo
+              convierte en una solución a largo plazo, reduciendo la necesidad
+              de reparaciones o reemplazos frecuentes.
+            </li>
+          </ul>
+        </Section>
+
+        <Section title="Usos Comunes del Hormigón Pulido" level={3}>
+          <ul>
+            <li>
+              <strong>Edificios comerciales</strong>: El hormigón pulido se
+              utiliza comúnmente en tiendas, oficinas, salas de exposiciones y
+              centros comerciales debido a su apariencia moderna y su
+              durabilidad en zonas de alto tráfico.
+            </li>
+            <li>
+              <strong>Garajes y talleres</strong>: Es una opción popular para
+              garajes y talleres, ya que es resistente al aceite, a las manchas
+              y al desgaste general de los vehículos.
+            </li>
+            <li>
+              <strong>Viviendas</strong>: Cada vez más se utiliza en viviendas
+              para interiores como salones, cocinas, pasillos y baños, debido a
+              su elegancia y facilidad de limpieza.
+            </li>
+            <li>
+              <strong>Almacenes y fábricas</strong>: Su resistencia a la
+              abrasión y a las cargas pesadas lo convierte en una opción ideal
+              para áreas industriales y comerciales con tráfico pesado.
+            </li>
+            <li>
+              <strong>Espacios exteriores</strong>: Aunque es más común en
+              interiores, el hormigón pulido también se puede usar en exteriores
+              como patios, terrazas o entradas, siempre que se aplique un
+              sellador adecuado para protegerlo de las inclemencias del tiempo.
+            </li>
+          </ul>
+        </Section>
+
+        <Section title="Proceso de Instalación del Hormigón Pulido" level={3}>
+          <ol>
+            <li>
+              <strong>Preparación de la base</strong>: Se prepara la superficie
+              de hormigón existente o se vierte un nuevo pavimento de hormigón,
+              asegurando que la base esté nivelada y libre de imperfecciones.
+            </li>
+            <li>
+              <strong>Pulido inicial</strong>: El primer paso en el proceso de
+              pulido es utilizar una máquina pulidora para alisar la superficie
+              y eliminar las imperfecciones.
+            </li>
+            <li>
+              <strong>Aseguramiento del brillo</strong>: A continuación, se
+              utilizan discos abrasivos de grano fino para lograr el nivel
+              deseado de brillo y suavidad en la superficie del hormigón.
+            </li>
+            <li>
+              <strong>Aplicación de sellador</strong>: Una vez pulida la
+              superficie, se aplica un sellador especial que protegerá el
+              hormigón y resaltará el brillo, ayudando a prevenir manchas y
+              daños futuros.
+            </li>
+            <li>
+              <strong>Acabado final</strong>: Se deja secar completamente y se
+              realiza una última limpieza para garantizar que la superficie esté
+              perfectamente terminada.
+            </li>
+          </ol>
+        </Section>
+
+        <Section title="Mantenimiento del Hormigón Pulido" level={3}>
+          <p>
+            El mantenimiento del <strong>hormigón pulido</strong> es muy sencillo
+            y económico. Aquí te damos algunas recomendaciones:
+          </p>
+          <ul>
+            <li>
+              <strong>Limpieza regular</strong>: Es importante barrer o aspirar
+              la superficie con regularidad para evitar que el polvo y la
+              suciedad se acumulen.
+            </li>
+            <li>
+              <strong>Limpiar con productos suaves</strong>: Para limpiar
+              manchas, usa productos de limpieza no abrasivos y agua. Evita el
+              uso de productos químicos agresivos que puedan dañar el sellador.
+            </li>
+            <li>
+              <strong>Reaplicación de sellador</strong>: Aunque el sellado es
+              duradero, con el tiempo es recomendable reaplicar el sellador para
+              mantener la protección y el brillo del hormigón.
+            </li>
+            <li>
+              <strong>Evitar el uso de ácidos</strong>: Evita el uso de
+              productos ácidos o abrasivos que puedan dañar la superficie
+              pulida.
+            </li>
+          </ul>
+        </Section>
+
+        <Section title="Colores y Acabados del Hormigón Pulido" level={3}>
+          <p>
+            El hormigón pulido puede ser personalizado en una variedad de
+            colores y acabados para adaptarse al diseño de tu espacio:
+          </p>
+          <ul>
+            <li>
+              <strong>Colores neutros</strong>: Colores como gris, beige y
+              blanco son opciones populares debido a su versatilidad y capacidad
+              para complementar cualquier estilo.
+            </li>
+            <li>
+              <strong>Colores vibrantes</strong>: También es posible crear
+              acabados más audaces con colores como negro, rojo o incluso tonos
+              metálicos, dependiendo del estilo deseado.
+            </li>
+            <li>
+              <strong>Texturizado</strong>: Aunque el hormigón pulido es
+              conocido por su acabado brillante, también se pueden crear
+              texturas sutiles para dar un toque único a la superficie.
+            </li>
+          </ul>
+        </Section>
+      </main>
+      <StickyBanner />
+    </div>
+    <Footer />
+  </div>
+</html>

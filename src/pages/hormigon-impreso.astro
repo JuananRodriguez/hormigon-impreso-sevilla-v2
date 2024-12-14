@@ -1,0 +1,218 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeroBanner from "../components/HeroBannerSimple.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Section from "fulldev-ui/components/Section.astro";
+import StickyBanner from "../components/StickyBanner.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <div>
+    <Header />
+    <HeroBanner
+      title="Hormigón impreso"
+      subtitle="Trabajamos para Sevilla, Huelva, Cádiz y alrededores"
+    />
+    <div>
+      <main>
+        <Section title="¿Qué es el Hormigón Impreso?" level={3}>
+          <p>
+            El <strong>hormigón impreso</strong> es un tipo de pavimento decorativo
+            que se utiliza en exteriores e interiores para crear superficies estéticamente
+            atractivas y resistentes. Este tipo de hormigón es vertido sobre una
+            base preparada y luego se moldea con moldes especiales o plantillas para
+            imitar materiales tradicionales como piedra, ladrillo, madera o incluso
+            patrones personalizados. El proceso se realiza cuando el hormigón aún
+            está fresco, lo que permite que se imprima el diseño elegido, creando
+            una textura tridimensional.
+          </p>
+        </Section>
+        <Section title="Características del Hormigón Impreso" level={3}>
+          <ul>
+            <li>
+              <strong>Versatilidad en diseño y acabado</strong>: El hormigón
+              impreso permite una amplia gama de opciones decorativas, desde
+              patrones clásicos hasta diseños completamente personalizados.
+            </li>
+            <li>
+              <strong>Resistencia</strong>: Al igual que el hormigón
+              convencional, el hormigón impreso es extremadamente duradero y
+              puede soportar condiciones climáticas severas, así como el tráfico
+              vehicular y peatonal.
+            </li>
+            <li>
+              <strong>Fácil mantenimiento</strong>: Aunque es importante
+              realizar un sellado periódico para preservar su acabado, el
+              mantenimiento del hormigón impreso es mucho más fácil que el de
+              otros materiales como piedra o madera.
+            </li>
+            <li>
+              <strong>Durabilidad</strong>: Una vez curado y sellado
+              adecuadamente, el hormigón impreso tiene una vida útil muy larga.
+              Es resistente a la abrasión, la corrosión y los impactos.
+            </li>
+            <li>
+              <strong>Resistencia a las inclemencias del tiempo</strong>: Su
+              resistencia al clima hace que el hormigón impreso sea ideal para
+              exteriores, resistiendo el frío, la lluvia, el calor extremo y la
+              exposición al sol sin perder su apariencia o funcionalidad.
+            </li>
+          </ul>
+        </Section>
+        <Section title="Ventajas del Hormigón Impreso" level={3}>
+          <ul>
+            <li>
+              <strong>Estética personalizada</strong>: Gracias a los diferentes
+              moldes disponibles, puedes crear acabados que imitan materiales
+              como ladrillo, piedra natural, madera, baldosas y más, adaptándose
+              a cualquier estilo y espacio.
+            </li>
+            <li>
+              <strong>Bajo costo de mantenimiento</strong>: A diferencia de
+              otros pavimentos, el hormigón impreso no requiere sustituciones
+              frecuentes ni un mantenimiento complicado. Solo es necesario un
+              mantenimiento mínimo de limpieza y reaplicación de selladores.
+            </li>
+            <li>
+              <strong>Larga vida útil</strong>: El hormigón impreso es muy
+              duradero y resistente, lo que lo convierte en una opción excelente
+              para superficies expuestas a condiciones climáticas adversas y
+              alto tráfico.
+            </li>
+            <li>
+              <strong>Aumenta el valor de la propiedad</strong>: Este tipo de
+              pavimento no solo mejora la estética de una propiedad, sino que
+              también puede aumentar su valor al ofrecer una solución duradera y
+              de alta calidad para exteriores e interiores.
+            </li>
+            <li>
+              <strong>Resistencia a las manchas</strong>: El sellado adecuado
+              protege la superficie contra manchas, aceites y otros productos
+              que suelen dañar otros tipos de pavimento como el cemento o la
+              madera.
+            </li>
+          </ul>
+        </Section>
+        <Section title="Usos Comunes del Hormigón Impreso" level={3}>
+          <ul>
+            <li>
+              <strong>Jardines y patios exteriores</strong>: El hormigón impreso
+              es ideal para patios y caminos en jardines, ya que ofrece una
+              excelente combinación de estética y funcionalidad.
+            </li>
+            <li>
+              <strong>Entradas y caminos de acceso</strong>: Muchas casas y
+              edificios comerciales utilizan el hormigón impreso en las entradas
+              de vehículos por su resistencia al tráfico pesado y la facilidad
+              para mantener su apariencia.
+            </li>
+            <li>
+              <strong>Áreas alrededor de piscinas</strong>: Es una opción
+              excelente para alrededor de piscinas, ya que su textura
+              antideslizante puede evitar accidentes en superficies mojadas.
+            </li>
+            <li>
+              <strong>Terrazas y balcones</strong>: Ideal para espacios
+              exteriores como terrazas y balcones, donde se busca una apariencia
+              atractiva y una superficie fácil de mantener.
+            </li>
+            <li>
+              <strong>Áreas comerciales</strong>: También se usa ampliamente en
+              zonas comerciales o de alto tráfico, como plazas, parques y áreas
+              peatonales, debido a su durabilidad y versatilidad.
+            </li>
+          </ul>
+        </Section>
+        <Section title="Proceso de Instalación del Hormigón Impreso" level={3}>
+          <ol>
+            <li>
+              <strong>Preparación del terreno</strong>: Se limpia y nivela la
+              superficie para asegurar que el hormigón se adhiera correctamente.
+              Se pueden aplicar capas de arena o una base de grava según sea
+              necesario.
+            </li>
+            <li>
+              <strong>Vertido del hormigón</strong>: Se vierte el hormigón en la
+              superficie preparada y se extiende uniformemente.
+            </li>
+            <li>
+              <strong>Impresión del diseño</strong>: Mientras el hormigón está
+              todavía fresco, se utilizan moldes o plantillas para estampar el
+              diseño deseado en la superficie. Este proceso puede ser
+              personalizado para lograr una amplia variedad de texturas y
+              patrones.
+            </li>
+            <li>
+              <strong>Curado y sellado</strong>: Después de que el hormigón ha
+              curado, se aplica un sellador para protegerlo de manchas y daños.
+              Este paso es crucial para asegurar la longevidad del pavimento.
+            </li>
+            <li>
+              <strong>Secado y acabado</strong>: Finalmente, el hormigón se deja
+              secar completamente. Dependiendo de las condiciones climáticas,
+              este proceso puede tardar de 24 a 48 horas para que se pueda
+              caminar sobre él y de 7 a 28 días para que se cure completamente.
+            </li>
+          </ol>
+        </Section>
+
+        <Section title="Mantenimiento del Hormigón Impreso" level={3}>
+          <p>
+            Aunque el <strong>hormigón impreso</strong> es bastante resistente, es
+            recomendable aplicar un sellado adicional cada 2 o 3 años, dependiendo
+            del tráfico y la exposición a las inclemencias del tiempo. El sellado
+            ayuda a proteger el acabado, mantener el color vibrante y evitar la penetración
+            de agua o manchas.
+          </p>
+          <p>
+            Además, es recomendable barrer o lavar la superficie regularmente
+            para mantenerla limpia y libre de escombros que puedan dañar el
+            acabado. Evita el uso de productos abrasivos o ácidos que puedan
+            deteriorar el sellador.
+          </p>
+        </Section>
+        <Section
+          title="Tipos de Diseños y Colores para Hormigón Impreso"
+          level={3}
+        >
+          <p>
+            El hormigón impreso ofrece una amplia variedad de patrones y
+            colores, tales como:
+          </p>
+          <ul>
+            <li>
+              <strong>Patrones de piedra</strong>: Como piedra de pizarra,
+              piedra rústica o piedra de campo.
+            </li>
+            <li>
+              <strong>Patrones de ladrillo</strong>: Para una apariencia clásica
+              o contemporánea.
+            </li>
+            <li>
+              <strong>Madera</strong>: Imitando la apariencia de madera
+              envejecida o madera moderna.
+            </li>
+            <li>
+              <strong>Mármol</strong>: Ideal para un acabado elegante y
+              sofisticado.
+            </li>
+          </ul>
+          <p>
+            Los colores también son personalizables, desde tonos neutros como
+            grises y beige hasta colores más vibrantes para un estilo único.
+            Además, es posible combinar diferentes colores y patrones para crear
+            diseños más elaborados y únicos.
+          </p>
+        </Section>
+      </main>
+      <StickyBanner />
+    </div>
+    <Footer />
+  </div>
+</html>

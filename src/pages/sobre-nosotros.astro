@@ -1,0 +1,87 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeroBanner from "../components/HeroBannerSimple.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import StickyBanner from "../components/StickyBanner.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <div>
+    <Header />
+    <HeroBanner
+      title="Sobre nosotros"
+      subtitle="Trabajamos para Sevilla, Huelva, Cádiz y alrededores"
+    />
+    <div>
+      <main>
+        <p>
+          En <strong>Hormigón Impreso Sevilla</strong>, somos expertos en el
+          diseño, la fabricación y la instalación de soluciones de hormigón
+          personalizadas, ofreciendo un servicio de calidad, precisión y
+          compromiso. Nos apasiona transformar espacios mediante el uso de
+          hormigón, tanto en proyectos residenciales como comerciales, con una
+          amplia variedad de aplicaciones como hormigón impreso, pulido,
+          vertical y tematización.
+        </p>
+
+        <p>
+          Con años de experiencia en el sector, nuestro equipo está compuesto
+          por profesionales altamente capacitados que trabajan con los mejores
+          materiales y las últimas tecnologías para asegurar resultados
+          duraderos y estéticamente impresionantes. Nuestra misión es
+          proporcionar soluciones innovadoras que se adapten a las necesidades
+          de nuestros clientes, garantizando siempre la máxima satisfacción y un
+          acabado impecable.
+        </p>
+
+        <p>
+          En <strong>Hormigón Impreso Sevilla</strong>, entendemos que cada
+          proyecto es único, por lo que trabajamos estrechamente con nuestros
+          clientes, escuchando sus ideas y ofreciendo asesoramiento
+          personalizado en cada etapa del proceso. Desde la planificación hasta
+          la ejecución, nos aseguramos de que cada detalle se ejecute a la
+          perfección.
+        </p>
+
+        <p>
+          Somos una empresa eficaz, con capacidad para llevar a cabo trabajos de
+          grandes dimensiones, manteniendo siempre los más altos estándares de
+          calidad y cumplimiento de plazos. Nuestra experiencia nos ha permitido
+          abordar proyectos de gran envergadura, tanto para empresas como para
+          particulares, en los que hemos demostrado nuestra capacidad para
+          superar expectativas.
+        </p>
+
+        <p>
+          Prestamos nuestros servicios en las provincias de <strong
+            >Sevilla, Huelva, Cádiz y alrededores</strong
+          >, y nos enorgullece ofrecer soluciones personalizadas y adaptadas a
+          las necesidades de cada cliente en estas zonas.
+        </p>
+
+        <p>
+          Además, nuestros precios son altamente competitivos, lo que nos
+          permite ofrecer una excelente relación calidad-precio sin comprometer
+          la calidad de nuestros trabajos. Ya sea para una obra particular o un
+          proyecto empresarial, en <strong>Hormigón Impreso Sevilla</strong> garantizamos
+          que recibirás un servicio a medida, eficiente y con los mejores resultados.
+        </p>
+
+        <p>
+          Si buscas calidad, durabilidad y un diseño a la medida, <strong
+            >Hormigón Impreso Sevilla</strong
+          > es tu aliado perfecto en soluciones de hormigón. Confía en nosotros para
+          hacer realidad tu proyecto.
+        </p>
+      </main>
+      <StickyBanner />
+    </div>
+    <Footer />
+  </div>
+</html>
