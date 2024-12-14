@@ -1,7 +1,11 @@
 ---
 import Heading from "fulldev-ui/components/Heading.astro";
+import BannerImg from "../images/home/hero/hormigon-impreso-en-sevilla.jpg";
 import "swiper/css";
 import "swiper/css/navigation";
+
+const backgroundImage = `url(${BannerImg.src})`;
+console.log(backgroundImage);
 ---
 
 <div class="swiper">
@@ -20,7 +24,7 @@ import "swiper/css/navigation";
   </section>
 </div>
 
-<style>
+<style define:vars={{ backgroundImage }}>
   .swiper {
     position: relative;
     width: 100%;
@@ -31,7 +35,7 @@ import "swiper/css/navigation";
     height: 100vh;
     overflow: hidden;
     background-color: black;
-    background: url("/images/home/hero/hormigon-impreso-en-sevilla.jpg");
+    background: var(--backgroundImage);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: exclusion;
