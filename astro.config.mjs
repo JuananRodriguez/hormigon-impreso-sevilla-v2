@@ -10,7 +10,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	output: 'server',
 	adapter: deno(),
-	site: 'https://example.com',
+	site: 'https://hormigonimpresosevilla.es/',
 	integrations: [mdx(), sitemap(), fulldev({
 		// css: '/src/css/custom.css',
 		colors: {
