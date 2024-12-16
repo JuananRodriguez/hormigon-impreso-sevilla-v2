@@ -12,6 +12,7 @@ const waMessage = new URLSearchParams({
     <Link
       href="tel:+34641434996"
       size="lg"
+      target="_blank"
       class="contact-section telephone-section"
     >
       <Image
@@ -20,10 +21,12 @@ const waMessage = new URLSearchParams({
         src="/images/social/phone_logo.svg"
       />
       Teléfono
+      <span class="sr-only">Abrir aplicación de teléfono para llamar</span>
     </Link>
     <Link
       href="mailto:info@hormigonimpresosevilla.es"
       size="lg"
+      target="_blank"
       class="contact-section email-section"
     >
       <Image
@@ -32,10 +35,12 @@ const waMessage = new URLSearchParams({
         src="/images/social/email_logo.svg"
       />
       Email
+      <span class="sr-only">Abrir aplicación de email para enviar email</span>
     </Link>
     <Link
       href=`https://wa.me/34641434996?${waMessage}`
       size="lg"
+      target="_blank"
       class="contact-section whatsapp-section"
     >
       <Image
@@ -44,6 +49,7 @@ const waMessage = new URLSearchParams({
         src="/images/social/whatsapp_logo.svg"
       />
       WhatsApp
+      <span class="sr-only">Abrir aplicación whatsapp</span>
     </Link>
   </div>
 </section>
