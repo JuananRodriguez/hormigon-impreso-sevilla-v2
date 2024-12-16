@@ -18,12 +18,12 @@ export default defineConfig({
 			dark: {
 				background: '#111110',
 				base: '#6F6D66',
-				brand: '#F50',
+				brand: '#058cb9',
 			},
 			light: {
 				background: '#EEEEEC',
 				base: '#6F6D66',
-				brand: '#F50',
+				brand: '#058cb9',
 			},
 		},
 	}),],

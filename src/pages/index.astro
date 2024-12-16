@@ -6,11 +6,11 @@ import HeroBanner from "../components/HeroBannerSimple.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Section from "fulldev-ui/components/Section.astro";
 import Heading from "fulldev-ui/components/Heading.astro";
-import Stack from "fulldev-ui/components/Stack.astro";
 import Split from "fulldev-ui/components/Split.astro";
 import Image from "fulldev-ui/components/Image.astro";
 import Gallery from "../components/Gallery.astro";
 import StickyBanner from "../components/StickyBanner.astro";
+import Link from "fulldev-ui/components/Link.astro";
 ---
 
 <!doctype html>
@@ -33,8 +33,8 @@ import StickyBanner from "../components/StickyBanner.astro";
     </HeroBanner>
     <div>
       <main>
-        <Section heading="Sobre nosotros" as="article">
-          <Split>
+        <Section heading="Sobre nosotros" as="article" space="none">
+          <Split align="start">
             <section>
               <Heading level={4} as="h3">
                 Realizamos trabajos de hormigón impreso en Sevilla, trabajos de
@@ -56,16 +56,21 @@ import StickyBanner from "../components/StickyBanner.astro";
             />
           </Split>
         </Section>
-        <Section heading="Nuestros servicios" as="article">
-          <Stack>
+        <Section
+          heading="Nuestros servicios"
+          as="article"
+          space="none"
+          class="mt3"
+        >
+          <Split align="start">
+            <a href="/hormigon-impreso">
+              <Image
+                src="/images/home/hormigon-impreso-sevilla.jpg"
+                alt="hormigon-impreso-en-sevilla"
+              />
+            </a>
             <section>
               <Heading level={3}>Hormigón Impreso</Heading>
-              <a href="/hormigon-impreso"
-                ><Image
-                  src="/images/home/hormigon-impreso-sevilla.jpg"
-                  alt="hormigon-impreso-en-sevilla"
-                />
-              </a>
               <p>
                 Se trata de una solución muy demandada que consiste en la
                 aplicación de un tratamiento sobre una superficie con un sistema
@@ -76,15 +81,20 @@ import StickyBanner from "../components/StickyBanner.astro";
                 estampado es capaz de imitar a los adoquines, la piedra o la
                 pizarra.
               </p>
+              <Link underline="hover" href="/hormigon-impreso"
+                >Ampliar información sobre hormigon impreso</Link
+              >
             </section>
-            <article>
+          </Split>
+          <Split align="start" class="mt3">
+            <a href="/hormigon-pulido">
+              <Image
+                src="/images/home/hormigon-pulido-sevilla.jpg"
+                alt="hormigon-pulido-en-sevilla"
+              />
+            </a>
+            <section>
               <Heading level={3}>Hormigón Pulido</Heading>
-              <a href="/hormigon-pulido">
-                <Image
-                  src="/images/home/hormigon-pulido-sevilla.jpg"
-                  alt="hormigon-pulido-en-sevilla"
-                />
-              </a>
               <p>
                 Hablamos de un material que sale del allanado y el fratasado de
                 un tipo de hormigón semipulido, al que se le suman compuestos
@@ -94,15 +104,20 @@ import StickyBanner from "../components/StickyBanner.astro";
                 llevado a que sea muy demandado para colocarlo en parques,
                 viviendas o piscinas.
               </p>
-            </article>
-            <article>
+              <Link underline="hover" href="/hormigon-pulido"
+                >Ampliar información sobre hormigon pulido</Link
+              >
+            </section>
+          </Split>
+          <Split align="start" class="mt3">
+            <a href="/hormigon-impreso-vertical-tematizado">
+              <Image
+                src="/images/home/hormigon-vertical-sevilla.jpg"
+                alt="hormigon-vertical-en-sevilla"
+              />
+            </a>
+            <section>
               <Heading level={3}>Hormigón Vertical</Heading>
-              <a href="/hormigon-impreso-vertical-tematizado">
-                <Image
-                  src="/images/home/hormigon-vertical-sevilla.jpg"
-                  alt="hormigon-vertical-en-sevilla"
-                />
-              </a>
               <p>
                 Se trata de una solución bastante sencilla y práctica con la que
                 podemos decorar superficies verticales tanto en espacios
@@ -110,15 +125,26 @@ import StickyBanner from "../components/StickyBanner.astro";
                 reacondicionar cualquier superficie en poco tiempo y así
                 conseguir que los espacios luzcan más elegantes y diferentes.
               </p>
-            </article>
-          </Stack>
+              <Link
+                underline="hover"
+                href="/hormigon-impreso-vertical-tematizado"
+                >Ampliar información sobre hormigón vertical</Link
+              >
+            </section>
+          </Split>
         </Section>
-        <Section heading="Galería de fotos" as="article">
+        <Section
+          heading="Galería de fotos"
+          as="article"
+          space="none"
+          class="mt3"
+        >
           <Gallery />
         </Section>
       </main>
       <StickyBanner />
     </div>
+
     <Footer />
   </body>
 </html>

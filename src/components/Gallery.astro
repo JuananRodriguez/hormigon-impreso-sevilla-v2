@@ -21,7 +21,7 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
 </script>
 
 <script>
-  const RANGE = 6;
+  const RANGE = 8;
 
   function handleLoadMore() {
     const hiddenImages = document.querySelectorAll(
@@ -29,6 +29,7 @@ const imageFiles = await Astro.glob("/src/images/home/gallery/*");
     );
     const isLast = hiddenImages.length <= RANGE;
     const selection = [...hiddenImages].splice(0, RANGE);
+
     selection.forEach((element) => {
       element.classList.remove("gallery-image-anchor-hidden");
       const newSrc = element.getAttribute("data-pswp-src");
